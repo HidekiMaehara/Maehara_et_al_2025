@@ -14,7 +14,7 @@ col_name_list <- c("WT_00min_1", "WT_00min_2", "WT_00min_3", "WT_00min_4", "WT_0
 colnames(count) <- col_name_list
 # Define group labels for each sample
 group_all <- factor(c("WT_00min", "WT_00min", "WT_00min","WT_00min", "WT_00min", "WT_00min","WT_00min", "WT_00min", "WT_00min","WT_00min", "WT_00min",
-                      "OB_00min", "OB_00min", "0B_00min","OB_00min", "OB_00min", "OB_00min","OB_00min", "OB_00min", "OB_00min","OB_00min", "OB_00min", "OB_00min"))
+                      "OB_00min", "OB_00min", "OB_00min","OB_00min", "OB_00min", "OB_00min","OB_00min", "OB_00min", "OB_00min","OB_00min", "OB_00min", "OB_00min"))
 # Filter out lowly expressed genes 
 keep.exprs <- filterByExpr(count, group = group_all, keep.lib.sizes = FALSE)
 count <- count[keep.exprs, ]
